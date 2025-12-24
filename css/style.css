@@ -300,6 +300,7 @@ header .container .bottom-wrapper__content__bottom-bar__search label::before {
   content: "";
   position: absolute;
   background: url(../icons/figure_main.svg);
+  background-repeat: no-repeat;
   width: 70%;
   height: 70%;
   -o-object-fit: cover;
