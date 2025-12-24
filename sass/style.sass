@@ -1,0 +1,1718 @@
+@font-face
+    font-family: "Arial"
+    src: url(../fonts/arialmt.ttf), format("opentype")
+    
+$main-color: #F37032
+$main-second-color: #F04C2F
+$theme-color: #fff
+$text-color: #000
+$download-icon: url(../icons/download-icon.svg)
+$main-gradient: linear-gradient($main-color, $main-second-color)
+
+
+$header-font: 20px
+$text-font: 24px
+$title-font: 64px
+
+*
+    box-sizing: border-box
+
+body 
+    display: flex
+    flex-direction: column
+
+a
+    text-decoration: none
+    color: $text-color
+    font-size: 20px
+
+
+.container
+    padding-inline: 120px
+    background: $theme-color
+    height: 100%
+    width: 100%
+    color: $text-color
+    font-family: "Arial"
+    font-weight: 900
+    font-size: 24px
+
+h2
+    font-size: 64px
+   
+header
+    .container
+        display: flex
+        flex-direction: column
+        .top-wrapper
+            display: flex
+            justify-content: space-between
+            height: 70px
+            align-items: center
+            border-bottom: 2px solid #000
+            &__left-content
+                width: 214px
+                display: flex
+                align-items: center
+                justify-content: space-between
+                .choose-lang
+                    position: relative
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: 25px
+                        top: 7px
+                        border: 7px solid transparent 
+                        border-top: 10px solid #000
+            &__nav-bar
+                display: flex
+                height: 100%
+                width: 100%
+                justify-content: space-around
+                border-left: 2px solid #000
+                margin-left: 34px
+                ul
+                    display: flex
+                    justify-content: space-between
+                &__for-whom
+                    gap: 40px
+                    align-items: center
+                    li
+                        position: relative
+                        a
+                            color: $main-color
+                            transition: color .2s ease
+                            &:hover
+                                color: $text-color
+                &__contacts
+                    gap: 45px
+                    align-items: center
+                    li
+                        position: relative
+                        a
+                            transition: color .2s ease
+                            &:hover
+                                color: $main-color
+        .bottom-wrapper
+            display: flex
+            align-items: center
+            border-bottom: 2px solid #000
+            &__logo
+                width: 250px
+                height: 70px
+                margin-right: 5px
+                img
+                    object-fit: cover
+            &__content
+                border-left: 2px solid #000
+                display: flex
+                flex-direction: column
+                align-items: center
+                width: 100%
+                &__top-bar
+                    display: flex
+                    justify-content: space-between
+                    width: 100%
+                    height: 55px
+                    align-items: center
+                    ul
+                        display: flex
+                        margin-left: 10px
+                        gap: 50px
+                        li
+                            position: relative
+                            a
+                                transition: color .2s ease
+                                &:hover
+                                    color: $main-color
+                    &__market
+                        position: relative
+                        background: $main-second-color
+                        height: 100%
+                        width: 140px
+                        border-left: 2px solid #000
+                        display: flex
+                        align-items: center
+                        padding-left: 12px
+                        a
+                            color: #fff
+                            &::after
+                                content: url(../icons/link-icon.svg)
+                                position: absolute
+                                right: 20px
+                                bottom: 10px
+                &__bottom-bar
+                    display: flex
+                    align-items: center
+                    width: 100%
+                    height: 60px
+                    &__main-info
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 100%
+                        gap: 50px
+                        li
+                            position: relative
+                            a
+                                color: $main-color
+                                transition: color .2s ease
+                                &:hover
+                                    color: $text-color
+                    &__search
+                        margin-left: auto
+                        border-top: 2px solid #000
+                        border-left: 2px solid #000
+                        height: 100%
+                        width: 275px
+                        background: $main-color
+                        display: flex
+                        align-items: center
+                        padding-inline: 15px
+                        input
+                            width: 150px
+                            height: 30px
+                            border-radius: 4px
+                            margin-right: 30px
+                            border: transparent
+                        label
+                            position: relative
+                            &::before
+                                content: url(../icons/search-icon.svg)
+                                position: absolute
+                                left: -55px
+
+.first-section
+    margin: 5px 0
+    height: 100vh
+    &__content
+        height: 100%
+        width: 100%
+        background: url(../img/first-section-bg.jpg)
+        background-repeat: no-repeat
+        background-size: cover
+        display: flex
+        justify-content: space-between
+        align-items: end
+        &__about-bar
+            position: relative
+            width: calc( 100vh - 10% )
+            ul
+                background-image: linear-gradient(to right, #fff 0%, #fff0 100%) 
+                li
+                    position: relative
+                    display: flex
+                    align-items: center
+                    height: 100px
+                    margin-top: -6px
+                    border-width: 6px
+                    background: #0000
+                    border-style: solid
+                    border-image: linear-gradient(to right, $main-color 0%, $main-second-color 100%) 1
+                    transition: background .5s ease
+                    &:hover
+                        background: #fff
+                    a
+                        display: block
+                        height: 100%
+                        width: 100%
+                        padding-top: 35px
+                        margin-left: 15px
+                        transition: color .2s ease
+                        &:hover
+                            color: $main-second-color
+        &__right-wrapper
+            padding: 65px 0 40px 0
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: flex-end
+            background: linear-gradient(to left, #fff 67%, #fff0 100%)
+            h2,
+            p
+                width: 67%
+
+.second-section
+    margin: 5px 0
+    height: 100vh
+    .container
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__content-wrapper
+        display: flex
+        justify-content: space-between
+        position: relative
+        z-index: 1
+        &__content
+            position: relative
+            padding-top: 80px
+            padding-right: 215px
+            width: 50%
+            height: 83vh
+            background: linear-gradient(to right, #fff 80%, #0000 100%)
+            &::before
+                content: ''
+                position: absolute
+                background: url(../icons/figure_main.svg)
+                width: 70%
+                height: 70%
+                object-fit: cover
+                top: -10px
+                left: -5px
+                z-index: 0
+            h2
+                position: relative
+                z-index: 1
+                color: $main-color
+                font-variant: small-caps
+                margin-bottom: 50px
+            p
+                position: relative
+                z-index: 1
+        &__bg-img
+            position: absolute
+            right: 0
+            top: 0
+            z-index: -1
+
+    &__action-wrapper
+        position: relative
+        z-index: 2
+        width: 100%
+        ul
+            display: flex
+            justify-content: space-between
+            li
+                position: relative
+                width: 100%
+                border: 2px solid #000
+                background: #fff
+                height: 145px
+                display: flex
+                justify-content: center
+                align-items: center
+                img
+                    position: absolute
+                .li-first
+                    bottom: 0
+                    left: 0
+                .li-middle
+                    top: 0
+                    left: 0
+                .li-last
+                    right: 0
+                    bottom: 0
+                a
+                    display: block
+                    height: 100%
+                    width: 100%
+                    text-align: center
+                    color: $main-color
+                    padding-top: 20%
+                    transition: color .2s ease
+                    &:hover
+                        color: $text-color
+                &:last-of-type
+                    background: $main-color
+                    transition: .5s ease
+                    &:hover
+                        background: $main-second-color
+                    a
+                        position: relative
+                        color: #fff
+                        padding-left: 50px
+                        &::before
+                            position: absolute
+                            content: $download-icon
+                            left: 45px
+
+
+.third-section
+    margin: 5px 0
+    height: calc(100vh + 150px)
+    h2
+        font-variant: small-caps
+        color: $main-color
+    &__main-card__content,
+    &__card-wrapper__card__card-content
+        p
+            font-size: 20px
+            &:last-of-type
+                font-weight: 300
+    &__main-card
+        width: 100%
+        border: 2px solid #000
+        background: url(../img/third-section-main-bg.jpg)
+        height: 300px
+        &__content
+            position: relative
+            width: 50%
+            height: 100%
+            background: linear-gradient(to right, #fff 60%, #0000 100%)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            padding: 30px 0
+            &::before
+                content: url(../icons/figure_main.svg)
+                position: absolute
+                opacity: 10%
+                top: -10px
+                left: -5px
+                z-index: 0
+            p
+                position: relative
+                z-index: 1
+                width: 370px
+                &:first-of-type
+                    font-size: 24px
+
+    &__card-wrapper
+        display: flex
+        justify-content: space-between
+        margin-top: 25px
+        &__card
+            position: relative
+            height: 380px
+            width: 380px
+            border: 2px solid #000
+            &__bg-img            
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+                object-fit: cover
+                z-index: 0
+            &__card-content
+                position: absolute
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                padding: 15px
+                padding-top: 50px
+                bottom: 0
+                width: 100%
+                height: 40%
+                background: linear-gradient(to top, #fff 70%, #0000 100%)
+                z-index: 1
+                p
+                    &:last-of-type
+                        align-self: flex-end
+    
+    &__action-wrapper
+        width: calc( 100% - 2px )
+        height: 4em
+        background: repeating-linear-gradient(125deg, #fff, #fff 18px, #0006 18px, #0006 21px);
+        outline: 2px solid #0006
+        display: flex
+        justify-content: space-between
+        align-items: center
+        a
+            font-size: 40px
+            transition: color .2s ease
+            &:hover
+                color: $main-color
+
+.fourth-section
+    margin-bottom: 100px
+    width: 100%
+    height: 100vh
+    .container
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        height: 100%
+    &__bg-img
+        height: 100%
+        position: absolute
+        z-index: 0
+        width: 45%
+    &__description
+        position: relative
+        width: 100%
+        font-size: 40px
+        z-index: 1
+        margin: 25px 10px
+    &__content
+        width: 75%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        h2
+            font-size: 60px
+            color: $main-color
+            font-variant: small-caps
+        p
+            font-size: 40px
+            font-weight: 300
+
+
+
+.footer
+    position: relative
+    width: 100%
+    height: 100vh
+    .container
+        display: flex
+        border-top: 2px solid $text-color
+        justify-content: space-between
+        align-items: start
+        gap: 55px
+        padding-top: 100px
+        padding-bottom: 100px
+    &__logo
+        width: 213px
+        height: 86px
+    &__nav-bar
+        height: 100%
+        font-size: 20px
+        display: flex
+        gap: 50px
+        justify-content: space-between
+        &__left,
+        &__right
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            gap: 45px
+            ul
+                li
+                    margin-bottom: 17px
+                    a
+                        transition: .2s ease
+                        &:hover
+                            color: $main-color
+                    &:first-of-type
+                        a
+                            font-size: 32px
+                            color: $main-color
+    &__info-wrapper
+        width: 275px
+        display: flex
+        flex-direction: column
+        gap: 30px
+        &__market
+            height: 3.5em
+            width: 100%
+            background: $main-second-color
+            border: 2px solid $text-color
+            border-radius: 4px
+            a
+                display: block
+                position: relative
+                transition: .2s ease
+                width: 100%
+                height: 100%
+                padding-top: calc( 4em/2 - .5em )
+                padding-inline: 2em
+                &::before
+                    content: url(../icons/link-icon.svg)
+                    position: absolute
+                    right: 30px
+                    top: 5px
+                &::after
+                    content: url(../icons/link-icon-dark.svg)
+                    position: absolute
+                    right: 30px
+                    top: 5px
+                    transition: .2s ease
+                        
+                &:hover
+                    color: #fff
+                    &::after
+                        opacity: 0
+        &__contacts
+            h2
+                font-size: 20px
+            ul
+                list-style: disc
+                padding-left: 20px
+                li
+                    font-weight: 300
+                    font-size: 16px
+                    margin-top: 1em
+        &__social
+            display: flex
+            justify-content: space-between
+            &__icon
+                width: 72px
+                height: 72px
+        &__call-center
+            a
+                color: $main-second-color
+                font-size: 32px
+            p
+                font-weight: 300
+                font-size: 16px
+                margin-top: 1em
+    &__copyright
+        position: absolute
+        bottom: 5px
+        left: calc( 50% - 158px )
+        font-size: 20px
+
+.content-wrapper
+    display: flex 
+    justify-content: space-between  
+    width: 100%
+    .sidebar
+        width: calc( 17% - 3px )
+        border-right: 2px solid $text-color
+        height: auto
+        &__nav-bar
+            position: sticky
+            height: 75vh
+            padding: 15px
+            padding-inline: 0
+            top: 100px
+            ul
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                height: 100%
+                li
+                    width: 205px
+                    height: 50px
+                    background: $main-second-color
+                    border: 2px solid $text-color
+                    transition: .2s ease
+                    &:nth-last-of-type(2)
+                        a
+                            padding-top: 0
+                    a
+                        display: block
+                        width: 100%
+                        height: 100%
+                        font-weight: 300
+                        transition: .2s ease
+                        padding-top: .5em
+                        &:hover,
+                        li:hover
+                            background: $main-color
+                    &:first-of-type
+                        a
+                            font-weight: 700
+            ul.sidebar-prod
+                li 
+                    a
+                        padding: 0
+                    &:first-of-type,
+                    &:last-of-type,
+                    &:nth-of-type(2)
+                        padding-top: .5em
+
+    .main-media-content
+        width: calc( 83% + 3px  )
+        margin-bottom: 100px
+        &__first-section
+            position: relative
+            display: flex
+            margin-top: 15px
+            width: 100%
+            height: 365px
+            justify-content: space-between
+            align-items: flex-end
+            background-image: url(../img/mediacenter-main-new-image.jpg)
+            color: #fff
+            padding: 20px 30px
+            h2
+                position: absolute
+                font-size: 40px
+                top: 25px
+                left: 25px
+            span
+                background: #0004
+                width: 200px
+                height: 60px
+                backdrop-filter: blur(2px)
+                border: 1px solid #fff
+                transition: .3s ease
+                a
+                    position: relative
+                    display: block
+                    color: #fff
+                    width: 100%
+                    height: 100%
+                    padding-top: calc( 30px - .5em )
+                    padding-left: 30px
+                    transition: .3s ease
+                    &::after
+                        content: '⇒'
+                        position: absolute
+                        transition: .3s ease
+                        right: 70px
+                    &:hover,
+                    span:hover
+                        color: $main-color
+                        background: #5553
+                    &:hover
+                        &::after
+                            right: 45px
+        &__search-wrapper
+            padding: 100px
+            padding-inline: 0
+            display: flex
+            width: 100%
+            justify-content: space-between
+            gap: 30px
+            &__search
+                padding: 25px
+                border: 3px solid $main-color
+                input
+                    margin-right: 35px
+                    width: 388px
+                    border: 1px solid $text-color
+                    border-radius: 4px
+            &__filter
+                padding: 15px 105px
+                background: $main-second-color
+                border: 2px solid $text-color
+                width: 275px
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                span
+                    position: relative
+                    &::after
+                        position: absolute
+                        content: ''
+                        background-color: #000
+                        width: 65px
+                        height: 2px
+                        bottom: 0
+    
+        &__card-section
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            &__card-line
+                display: flex
+                justify-content: space-between
+                padding: 50px 0
+                border-bottom: 2px solid $text-color
+                &:last-of-type
+                    border-bottom: 0
+                &__card
+                    position: relative
+                    height: 333px
+                    width: 305px
+                    border: 2px solid #000
+                    img            
+                        position: absolute
+                        top: 0
+                        left: 0
+                        height: 100%
+                        width: 100%
+                        object-fit: cover
+                        z-index: 0
+                    .card-content
+                        position: absolute
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-between
+                        padding: 15px
+                        padding-top: 50px
+                        bottom: 0
+                        width: 100%
+                        height: 40%
+                        background: linear-gradient(to top, #fff 70%, #0000 100%)
+                        z-index: 1
+                        p
+                            &:last-of-type
+                                align-self: flex-end
+                                font-weight: 300
+            &__pagination
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 100%
+                ul
+                    display: flex
+                    justify-content: center
+                    gap: 30px
+                    width: 100%
+                    border: 2px solid $text-color
+                    li
+                        width: 73px
+                        height: 73px
+                        margin: 15px
+                        margin-inline: 0
+                        border: 2px solid $text-color
+                        border-radius: 4px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        transition: .3s ease
+                        &:hover
+                            border-color: $main-color
+                        a
+                            font-size: 24px
+                            height: 100%
+                            width: 100%
+                            padding-top: calc( 50% - .5em )
+                            padding-left: calc( 50% - .4em )
+                            transition: .3s ease
+                            &:hover
+                                color: $main-color
+                    .pagination-active
+                        border-color: $main-color
+        &__action-wrapper
+            margin: 60px 0
+            width: 100%
+            display: flex
+            flex-direction: column
+            gap: 65px
+            &__sub
+                position: relative
+                width: 100%
+                background: repeating-linear-gradient(125deg, #fff, #fff 18px, #000 18px, #000 21px)
+                background-size: 50%
+                background-repeat: no-repeat
+                background-position: right   
+                height: 100px
+                display: flex
+                align-items: center
+                padding-left: 65px
+                &::after
+                    position: absolute
+                    content: ''
+                    width: 100px
+                    height: 100px
+                    background: #fff
+                    rotate: 125deg
+                    top: -40px
+                    right: 499px
+                &::before
+                    position: absolute
+                    content: ''
+                    height: 100%
+                    width: 100%
+                    border: 2px solid $text-color
+                    top: 0
+                    left: 0
+                    z-index: 1
+                a
+                    font-size: 24px
+                    position: relative
+                    transition: .3s ease
+                    z-index: 2
+                    &:hover
+                        color: $main-color
+            &__email
+                position: relative
+                width: 100%
+                background: repeating-linear-gradient(125deg, #fff, #fff 18px, $main-second-color 18px, $main-second-color 21px)
+                background-size: 20%
+                background-repeat: no-repeat
+                background-position: right   
+                height: 100px
+                display: flex
+                align-items: center
+                gap: 30px
+                padding-left: 65px
+                &::after
+                    position: absolute
+                    content: ''
+                    width: 100px
+                    height: 100px
+                    background: #fff
+                    rotate: 125deg
+                    top: -40px
+                    right: 179px
+                &::before
+                    position: absolute
+                    content: ''
+                    height: 100%
+                    width: 100%
+                    border: 2px solid $main-second-color
+                    top: 0
+                    left: 0
+                    z-index: 1
+                label,
+                input,
+                button
+                    position: relative
+                    z-index: 2
+                    transition: .3s ease
+                    &:hover
+                        color: $main-second-color
+                        border-color: $main-second-color
+
+                label
+                    color: $main-color
+                input
+                    border: 1px solid $text-color
+                    height: 40px
+                    border-radius: 6px
+                button
+                    background: #fff
+                    padding-inline: 30px
+                    height: 40px
+                    display: flex
+                    align-items: center
+                    border: 1px solid $text-color
+                    border-radius: 6px
+            &__social
+                display: flex
+                flex-direction: column
+                justify-content: center
+                gap: 75px
+                align-items: center
+                h2
+                    font-size: 40px
+                .action-social-icons
+                    display: flex
+                    gap: 185px
+                    a
+                        img
+                            height: 70px
+                            width: 70px
+    .prod-main-content
+        width: calc( 83% + 3px  )
+        margin-bottom: 100px
+        &__use-map
+            position: relative
+            width: 100%
+            height: 100vh
+            background: url(../img/production-1st-section-bg.jpg)
+            background-repeat: no-repeat
+            background-size: cover
+        &__company-prod
+            position: relative
+            width: 100%
+            img
+                position: absolute
+                right: -4px
+                top: 0
+                transform: scaleX(-1)
+            &__content
+                position: relative
+                display: flex
+                flex-direction: column
+                gap: 40px
+                z-index: 1
+                padding: 20px 0 0 20px
+                h2
+                    color: $main-color
+                    font-size: 40px
+                p
+                    font-size: 32px
+                &__cards
+                    margin-left: -20px
+                    display: flex
+                    justify-content: space-between
+                    background: #fff
+                    .prod-card
+                        padding: 5px
+                        height: 290px
+                        width: 280px
+                        border-width: 3px
+                        border-style: solid
+                        border-image: linear-gradient(to top, $main-color 0%, $main-second-color 100%) 1
+                        .title
+                            color: $main-color
+                            font-size: 20px
+                        p:last-of-type
+                            font-size: 15px
+                            font-weight: 300
+        &__tube-prod
+            position: relative
+            width: 100%
+            padding-top: 30px
+            height: 440px
+            &__bg-img
+                position: absolute
+                right: -3px
+                top: 0
+                z-index: 0
+            &__content
+                position: relative
+                z-index: 2
+                display: flex
+                align-items: flex-end
+                justify-content: space-between
+                height: 100%
+                &__left-wrapper
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    gap: 40px
+                    width: 520px
+                    height: 100%
+                    &__catalog
+                        width: 335px
+                        height: 100px
+                        background: $main-color
+                        transition: .3s ease
+                        border: 2px solid $text-color
+                        a
+                            position: relative
+                            color: #fff
+                            display: block
+                            width: 100%
+                            height: 100%
+                            padding-top: calc( 50px - .5em )
+                            padding-left: 90px
+                            font-size: 24px
+                            transition: .3s ease
+                            &:hover,
+                            span:hover
+                                background: $main-second-color
+                            &::before
+                                position: absolute
+                                content: $download-icon
+                                left: 35px
+                    .title
+                        font-size: 32px
+                    .paragraph
+                        font-weight: 300
+                        font-size: 20px
+                &__right-wrapper
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-end
+                    justify-content: flex-end
+                    height: 100%    
+                    span
+                        width: 300px
+                        height: 70px
+                        background: $main-color
+                        transition: .3s ease
+                        border: 2px solid $text-color
+                        a
+                            position: relative
+                            color: #fff
+                            display: block
+                            width: 100%
+                            height: 100%
+                            padding-top: calc( 30px - .5em )
+                            padding-left: 60px
+                            transition: .3s ease
+                            &:last-of-type
+                                font-size: 16px
+                            &:hover,
+                            span:hover
+                                background: $main-second-color
+                            &::before
+                                position: absolute
+                                content: $download-icon
+                                left: 25px
+        &__table
+            display: block
+            width: 100%
+            margin-top: 50px
+            transition: all 0.3s ease-in-out
+            opacity: 1
+            transform: translateY(0)
+            .hiden
+                display: none
+                opacity: 0
+                transform: translateY(-10px)
+            table
+                border: 2px solid $text-color
+                td
+                    border: 1px solid $text-color
+                    height: 100px
+                    font-size: 18px
+                    font-weight: 300
+                    text-align: center
+                    vertical-align: middle
+                tr.title
+                    background: #aaa
+                    td
+                        height: auto
+                        padding: 10px 5px
+
+.hamburger
+    display: flex
+    position: fixed
+    opacity: 0
+    padding: 10vw
+    height: 100vh
+    width: 0
+    flex-direction: column
+    align-items: flex-end
+    justify-content: center
+    gap: 45px
+    background: linear-gradient(45deg, $main-color 60%, $main-second-color 100%)
+    z-index: 10
+    transition: .5s ease
+    span
+        position: absolute
+        top: 30px
+        right: calc( 50% - .7em )
+        width: 32px
+        height: 32px
+        background: url(../icons/cross.svg)
+        background-size: cover
+    ul
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        gap: 2em
+        li
+            a
+                font-size: 24px
+                color: $text-color
+                transition: .3s ease
+                font-weight: 900
+                &:hover
+                    color: #fff
+
+// Планшетный адаптив
+@media (max-width: 1023px)
+    .container
+        padding-inline: 40px
+        font-size: 20px
+    a
+        font-size: 18px
+    h2
+        font-size: 56px
+    header
+        .container
+            .top-wrapper
+                height: 45px
+                &__left-content
+                    width: 110px
+                    .choose-lang
+                        display: none
+                &__nav-bar
+                    margin-left: 20px
+                    &__for-whom
+                        gap: 50px
+                    &__contacts
+                        flex-direction: column
+                        gap: 3px
+                        align-items: flex-end
+                        li:last-of-type
+                            a
+                                font-weight: 300
+                                font-size: 12px
+            .bottom-wrapper
+                &__logo
+                    width: 128px
+                    height: 40px
+                &__content
+                    flex-direction: row-reverse
+                    justify-content: flex-start
+                    height: 100%
+                    &__top-bar
+                        height: 65px
+                        width: 50px
+                        ul
+                            display: none
+                        &__market
+                            width: 50px
+                            padding-left: 0
+                            a
+                                color: #fff0
+                                &::after
+                                    right: 10px
+                                    top: 15px
+                    &__bottom-bar
+                        height: 65px
+                        justify-content: space-between
+                        width: 100%
+                        &__main-info
+                            gap: 25px
+                        &__search
+                            width: 115px
+                            justify-content: flex-end
+                            padding-right: 5px
+                            margin-left: 0
+                            input
+                                display: none
+                            label
+                                font-size: 18px
+                                &::before
+                                    left: -25px
+                        &__tablet
+                            padding: 10px 5px
+                            background: $main-second-color
+                            width: 65px
+                            height: 100%
+                            display: flex
+                            flex-direction: column
+                            justify-content: space-between
+                            span
+                                position: relative
+                                &::after
+                                    position: absolute
+                                    content: ''
+                                    background-color: #000
+                                    width: 35px
+                                    height: 2px
+                                    bottom: 0
+    .first-section
+        &__content
+            &__about-bar
+                width: 100%
+            &__right-wrapper
+                padding: 5px 0 20px 0
+                width: 100%
+                background: linear-gradient(to left, #fff 87%, #fff0 100%)
+                h2,
+                p
+                    width: 87%
+                    text-align: right
+                    margin-bottom: 20px
+                img
+                    order: 1
+    .second-section
+        .container
+            justify-content: start
+        &__content-wrapper
+            &__content
+                padding-top: 30px
+                padding-right: 0
+                padding-left: 10px
+                height: auto
+                margin-bottom: 0
+                padding-bottom: 20vh
+                h2
+                    font-size: 48px
+                    font-weight: 900
+                p
+                    font-size: 16px
+                    font-weight: 300
+        &__action-wrapper
+            background: linear-gradient(to right, #fff 40%, #0000 50%)
+            ul
+                flex-wrap: wrap
+                li
+                    width: 33.3%
+                    height: auto
+                    a
+                        padding: 10%
+
+                    img
+                        height: 100%
+                    &:last-of-type
+                        order: -1
+                        margin-right: 67%
+                        a
+                            padding-left: 25%
+
+    .third-section
+        &__main-card
+            &__content
+                width: 60%
+                background: linear-gradient(to right, #fff 75%, #0000 100%)
+                p
+                    width: 80%
+
+        &__card-wrapper
+            &__card
+                width: 270px
+                &__card-content
+                    p
+                        text-align: center
+                        font-size: 18px
+                &:last-of-type
+                    display: none
+
+        &__action-wrapper
+            margin-top: 50px
+            a
+                font-size: 24px
+
+    .fourth-section
+        height: 50vh
+        margin-top: 100px
+        &__description
+            font-size: 24px
+            color: #fff
+        &__content
+            h2
+                font-size: 36px
+                font-variant: normal
+            p
+                font-size: 24px
+    .footer
+        height: auto
+        .container
+            flex-direction: column
+            width: 100%
+        &__nav-bar
+            width: 100%
+            font-size: 18px
+            ul
+                li:first-of-type
+                    a
+                        font-size: 28px
+        &__info-wrapper
+            flex-wrap: wrap
+            height: 330px
+            justify-content: space-between
+            width: 60%
+            &__market
+                order: 3
+                width: 50%
+                margin-left: 15%
+                a
+                    padding-top: .5em
+                    font-size: 24px
+                    padding-inline: .5em
+                    padding-right: 2em
+            &__social
+                &__icon
+                    width: 50px
+                    height: 50px
+            
+    .content-wrapper
+        .sidebar
+            display: none
+        .main-media-content,
+        .prod-main-content
+            width: 100%
+            margin-bottom: 50px
+        .main-media-content
+            &__search-wrapper
+                margin: 50px 0
+                padding: 0
+                gap: 0
+                border: 3px solid $main-second-color
+                &__search
+                    border: none
+                    padding: 1em 1em
+                    input
+                        margin-right: 5px
+                &__filter
+                    width: 3.5em
+                    border: none
+                    padding: 1.2em
+                    span
+                        &::after
+                            width: 100%
+
+            &__card-section
+                &__card-line
+                    &__card
+                        &:last-of-type
+                            display: none
+
+                &__pagination
+                    height: auto
+                    ul
+                        margin: 0 30px
+                        gap: 30px
+                        li
+                            width: auto
+                            height: auto
+                            margin: 0.4em
+                            a
+                                font-size: 20px
+                                padding: .5em .7em
+
+            &__action-wrapper
+                &__sub,
+                &__email
+                    background: #fff
+                    border: 1px solid $text-color
+                    height: 3.5em
+                    padding-left: 1em
+                    &::after,
+                    &::before
+                        display: none
+                &__email
+                    border: 2px solid $main-color
+                    border-radius: 6px
+
+        .prod-main-content
+            &__use-map
+                height: 60vh
+            &__company-prod
+                &__content
+                    &__cards
+                        .prod-card
+                            width: 220px
+                            .title
+                                font-size: 18px
+                            p
+                                &:last-of-type
+                                    font-size: 14px
+            &__tube-prod
+                height: 80vh
+                &__content
+                    flex-direction: column
+                    align-items: start
+                    gap: 100px
+                    &__right-wrapper
+                        width: 100%
+                        height: auto
+                        flex-direction: row-reverse
+                        justify-content: space-between
+                        flex-wrap: wrap-reverse
+                        span
+                            width: 49%
+                            height: 2.5em
+                            a
+                                font-size: 16px
+                                padding: 1em
+                                padding-left: 5em
+                                &::before
+                                    top: .5em
+                            &:first-of-type
+                                background: #fff
+                                border: 2px solid $main-color
+                                a
+                                    color: $text-color
+                                    text-align: center
+                                    padding-left: 1em
+                                    padding-top: .8em
+                                    font-size: 18px
+                                    &:hover
+                                        color: $main-color
+                                        background: #fff
+                                    &::before
+                                        display: none        
+                            &:last-of-type
+                                order: -1
+                                a
+                                    padding-top: 5px
+            &__table
+                display: none
+                table
+                    td
+                        font-size: 14px
+
+@media (max-width: 767px)
+    $download-icon: url(../icons/mobile-download-icon.svg)
+    .container
+        padding-inline: 20px
+        font-size: 16px
+    a
+        font-size: 12px
+    h2
+        font-size: 24px
+    header
+        .container
+            height: 30px
+            .top-wrapper
+                display: none
+            .bottom-wrapper
+                height: 100%
+                &__logo
+                    width: 60px
+                    height: 20px
+                &__content
+                    &__top-bar
+                        height: 100%
+                        &__market
+                            width: 45px
+                            a
+                                color: #0000
+                                &::before
+                                    content: url(../icons/mobile-market-logo.svg)
+                                    position: absolute
+                                    left: 3px
+                                &::after 
+                                    content: url(../icons/mobile-market-icon.svg)
+                                    right: 5px
+                                    top: 5px
+                    &__bottom-bar
+                        height: 100%
+                        flex-direction: row-reverse
+                        &__main-info
+                            gap: 10px
+                        &__search
+                            display: none
+                        &__tablet
+                            width: 30px
+                            span
+                                &::after
+                                    width: 20px
+                                    height: 1px
+    .first-section
+        height: 70vh
+        &__content
+            flex-direction: column-reverse
+            &__about-bar
+                ul
+                    li
+                        height: 3em
+                        margin-top: -3px
+                        border-width: 3px
+                        a
+                            padding-top: 1em
+                            padding-left: 1em
+            &__right-wrapper
+                height: 200px
+                background: linear-gradient(to bottom, #fff 50%, #fff0 100%)
+                justify-content: start
+                h2,
+                p
+                    width: 100%
+                    font-weight: 700
+                img
+                    display: none
+    .second-section
+        &__content-wrapper
+            flex-direction: column
+            height: 100%
+            justify-content: start
+            &__content
+                padding-bottom: 10px
+                width: 100%
+                &::before
+                    opacity: .5
+            &__bg-img
+                position: relative
+                padding-bottom: 20px
+        &__action-wrapper
+            ul
+                li
+                    width: 33%
+                    margin-top: 0.1em
+                    a
+                        padding: 1em .5em
+                    img
+                        display: none
+                    &:last-of-type
+                        width: 66.6%
+                        margin-right: 0
+                        margin-left: 33.3%
+                        a
+                            padding-left: 10%
+                            &::before
+                                content: $download-icon
+                                left: 50px
+                                top: 10px
+
+    .third-section
+        padding-top: 30px
+        &__main-card
+            display: none
+        h2
+            font-size: 32px
+        &__card-wrapper
+            flex-direction: column
+            align-items: center
+            gap: 30px
+            &__card
+                height: 270px
+        &__action-wrapper
+            background: #0000
+            outline: none
+            flex-direction: column
+            align-items: start
+            gap: 1em
+            width: 65vw
+            a
+                width: 100%
+                padding: 1em .0
+                text-align: center
+                font-size: 14px
+                border: 2px solid $main-color
+
+    .fourth-section
+        margin-top: 50px
+        margin-bottom: 300px
+        .container
+            flex-direction: column
+        &__bg-img
+            position: relative
+            width: 100%
+        &__description
+            position: absolute
+            left: 30px
+            bottom: 0
+            width: 60%
+        &__content
+            width: 100%
+            h2
+                position: absolute
+                font-size: 24px
+                top: -60px
+                left: 20px
+                width: 50%
+            p
+                margin-top: 20px
+                width: 100%
+                font-size: 20px
+    .footer
+        .container
+            align-items: center
+            gap: 15px
+            padding-top: 20px
+        &__logo
+            width: 120px
+            height: 50px
+            align-self: start
+        &__nav-bar
+            flex-direction: column
+            gap: 15px
+            &__left, &__right
+                gap: 15px
+            ul
+                gap: 15px
+                li:first-of-type
+                    display: flex
+                    justify-content: center
+                    a
+                        font-size: 20px
+                li:not(:first-of-type)
+                    display: none
+        &__info-wrapper
+            flex-wrap: nowrap
+            width: 100%
+            gap: 10px
+            height: auto
+            &__market
+                display: none
+            &__contacts
+                h2
+                    font-size: 14px
+                a
+                    font-size: 12px
+            &__social
+                width: 35%
+                &__icon
+                    width: 20px
+                    height: 20px
+            &__call-center
+                a
+                    font-size: 14px
+                p
+                    font-size: 12px
+
+        &__copyright
+            font-size: 12px
+            left: calc( 50% - 95px )
+
+    .content-wrapper
+        .main-media-content
+            margin: 0
+            &__first-section
+                display: none
+            &__search-wrapper
+                padding-inline: 1.5em
+                &__search
+                    padding: 0.5em
+                    input
+                        width: 100px
+                    label
+                        font-size: 12px
+                &__filter
+                    margin: 0.25em
+                    width: 2em
+                    height: 2em
+                    background: #fff
+                    border: 1px solid $text-color
+                    border-radius: 2px
+                    padding: .5em
+
+            &__card-section
+                &__card-line
+                    justify-content: center
+                    &__card
+                        &:first-of-type
+                            display: none
+
+                &__pagination
+                    height: auto
+                    ul
+                        gap: 5px
+                        li
+                            width: auto
+                            height: auto
+                            margin: 0.2em
+                            a
+                                font-size: 12px
+                                padding: 0.5em .7em
+
+            &__action-wrapper
+                margin: 25px 0
+                &__sub,
+                &__email
+                    a
+                        font-size: 14px
+                    label
+                        font-size: 10px
+                &__email
+                    height: auto
+                    gap: 1em
+                    input,button
+                        font-size: 10px
+                        width: 12em
+                        height: 2.5em
+                        margin: .3em
+                    button
+                        width: 5em
+                        padding-inline: .5em
+                        justify-content: center
+                &__social
+                    gap: 20px
+                    h2
+                        font-size: 18px
+                    .action-social-icons
+                        gap: 20px
+                        a
+                            img
+                                width: 30px
+                                height: 30px
+
+        .prod-main-content
+            &__use-map
+                height: 30vh
+            &__company-prod
+                img
+                    display: none
+                &__content
+                    align-items: center
+                    h2,p
+                        text-align: center
+                    &__cards
+                        flex-direction: column
+                        gap: 30px
+                        .prod-card
+                            width: 100%
+                            height: 250px
+            &__tube-prod
+                height: auto
+                &__bg-img
+                    display: none
+                &__content
+                    height: auto
+                    gap: 50px
+                    &__left-wrapper
+                        width: 100%
+                        gap: 15px
+                        align-items: center
+                        &__catalog
+                            width: 70vw
+                            height: auto
+                            padding: 0.2em
+                            a
+                                font-size: 16px
+                                padding: 0.5em
+                                padding-left: 4em
+                                &::before
+                                    top: .1em
+                                    left: .5em
+                        .title
+                            font-size: 24px
+                        .paragraph
+                            font-size: 16px
+                    &__right-wrapper
+                        flex-direction: column-reverse
+                        span
+                            width: 100%
+                            a
+                                font-size: 16px
+                                padding: .5em
+                                padding-left: 5em
+                                &::before
+                                    top: .25em
+                            &:last-of-type
+                                a
+                                    font-size: 12px
+                            &:first-of-type
+                                display: none
+                    
